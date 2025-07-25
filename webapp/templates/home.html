@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head><title>Search Form</title></head>
+<body>
+<h2>Search Form</h2>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul style="color:red;">{% for msg in messages %}<li>{{ msg }}</li>{% endfor %}</ul>
+  {% endif %}
+{% endwith %}
+<form method="POST">
+  <input type="text" name="search" required>
+  <button type="submit">Submit</button>
+</form>
+</body>
+</html>
